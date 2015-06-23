@@ -1,0 +1,21 @@
+{% extends "gsb_cal/base.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; {% trans 'Documentation' %}
+</div>
+{% endblock %}
+{% block title %}{% trans 'Main Page' %}{% endblock %}
+
+{% block content %}
+
+<h1>{% trans 'Main Page' %}</h1>
+
+<div id="content-main">
+  <h3><a href="{%  url 'event-list' %}">{% trans 'Events' %}</a></h3>
+  <p>{% trans 'List of all events.' %}</p>
+</div>
+
+{% endblock %}

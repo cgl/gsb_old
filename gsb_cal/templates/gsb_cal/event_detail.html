@@ -1,0 +1,9 @@
+{% extends "gsb_cal/base.html" %}
+
+{% block content %}
+<h1>{{ object.event_name }}</h1>
+<p>{{ object.slogan }}</p>
+<p>Start Date: {{ object.start_date|date }}</p>
+<p>City: {{ object.city }}</p>
+<p>Date: {{ now|date }}</p>
+{% endblock %}
