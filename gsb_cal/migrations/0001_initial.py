@@ -104,6 +104,7 @@ EVENT_OBJS = [{"fields": {"website": "", "modified_date": "2015-06-07T00:14:05.0
 class Migration(migrations.Migration):
 
     dependencies = [
+        ('gsb_cal', '__init__'),
     ]
 
     operations = [
