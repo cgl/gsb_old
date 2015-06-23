@@ -2,6 +2,8 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
+import datetime
+import gsb_cal
 
 def combine_names(apps, schema_editor):
     # We can't import the Person model directly as it may be a newer
