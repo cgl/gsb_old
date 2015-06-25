@@ -2,19 +2,18 @@
 
 {% block content %}
 <p>{{ object.event_type}}</p>
-<p>Wish List 
+<p><strong>Status:</strong><br />
+  Wish List 
   <input type="checkbox" name="checkbox" id="checkbox" />
   <label for="checkbox"></label>
-  <br />
-  Attending
+  | Attending
   <input type="checkbox" name="checkbox2" id="checkbox2" />
   <label for="checkbox2"></label>
 </p>
 <h1><br />
 {{ object.event_name }}</h1>
 <h4>{{ object.slogan }}</h4>
-<p><strong>Status:</strong></p>
-<p><strong>Location:</strong> {{ object.city }} / {{ city.country }}</p>
+<p><strong>Location:</strong> {{ object.city }} / {{ object.city.country }}</p>
 <p><strong> Dates:</strong> {{ object.start_date|date }} - {{ object.finish_date|date }}</p>
 <p><strong>Dance Types: </strong></p>
 <ul>
@@ -26,7 +25,9 @@
 <p><strong>Website:</strong> {{ object.website|urlize}}</p>
 <form id="form1" name="form1" method="post" action="">
   <strong>Actions:</strong>
-  <input type="submit" name="button" id="button" value="Register" />
+  <input type="submit" name="button" id="button" value="Register NOW" />
+  <input type="submit" name="button2" id="button2" value="Share on FB" />
+   <input type="submit" name="button3" id="button3" value="Like on FB" />
 </form>
 <hr />
 <h3>Event Details</h3>
@@ -51,7 +52,7 @@
   <li><a href="">{{ type }}</a></li>
     {% endfor %}
 </ul>
-{% endblock %}
+
 <hr /> 
 <h3>Updates </h3>
 <hr />
@@ -62,3 +63,4 @@
 <h3>Recommended Events</h3>
 <hr />
 <p>&nbsp;</p>
+{% endblock %}
